@@ -1,0 +1,44 @@
+{
+  "name": "@fixers/disposable-email",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Check if an email is from a disposable domain",
+  "author": "Luca <git@lucacicada.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wefixers/disposable-email.git"
+  },
+  "keywords": [
+    "disposable-email"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "prepack": "pnpm run build",
+    "generate": "tsx scripts/generate.ts",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.8",
+    "@types/node": "^20.4.5",
+    "eslint": "^8.46.0",
+    "ofetch": "^1.1.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1",
+    "vitest": "^0.33.0"
+  }
+}

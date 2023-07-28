@@ -1,0 +1,5 @@
+Run:
+
+```
+pnpm generate
+```
